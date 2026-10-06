@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎮 Game Zone</h1>
+    <p>Pick a game and have fun!</p>
+    <input id="search" type="search" placeholder="Search games...">
+  </header>
+
+  <main>
+    <div id="games" class="game-grid"></div>
+  </main>
+
+  <div id="player" class="player hidden">
+    <div class="player-top">
+      <button id="close">✕ Close</button>
+      <h2 id="gameTitle"></h2>
+    </div>
+    <iframe id="gameFrame" title="Game"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

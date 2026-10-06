@@ -1,0 +1,25 @@
+{
+  "games": [
+    {
+      "id": "clicker",
+      "title": "Clicker Challenge",
+      "description": "Click as fast as you can!",
+      "icon": "\ud83d\uddb1\ufe0f",
+      "html": "<style>body{font-family:Arial;text-align:center;background:#111827;color:white;padding-top:15vh}button{font-size:28px;padding:25px 50px;border:0;border-radius:18px;background:#6366f1;color:white;cursor:pointer}#score{font-size:50px}</style><h1>Clicker Challenge</h1><div id='score'>0</div><button onclick='score++ ; document.getElementById(\"score\").textContent=score'>CLICK!</button><script>let score=0<\\/script>"
+    },
+    {
+      "id": "reaction",
+      "title": "Reaction Test",
+      "description": "Wait for green, then click!",
+      "icon": "\u26a1",
+      "html": "<style>body{font-family:Arial;text-align:center;padding-top:20vh;background:#1e293b;color:white}button{width:260px;height:180px;font-size:25px;border:0;border-radius:20px;background:#ef4444;color:white}</style><h1 id='msg'>Wait...</h1><button id='b'>START</button><script>let t; b.onclick=()=>{b.disabled=true;msg.textContent='Wait...';b.style.background='#ef4444';setTimeout(()=>{b.disabled=false;b.style.background='#22c55e';msg.textContent='CLICK NOW!';t=Date.now()},1000+Math.random()*2500)}; b.addEventListener('click',()=>{if(b.style.background.includes('34c55e')){msg.textContent='Your time: '+(Date.now()-t)+' ms';b.style.background='#ef4444'}})<\\/script>"
+    },
+    {
+      "id": "guess",
+      "title": "Number Guess",
+      "description": "Guess the secret number.",
+      "icon": "\ud83d\udd22",
+      "html": "<style>body{font-family:Arial;text-align:center;padding-top:15vh;background:#0f172a;color:white}input,button{padding:12px;font-size:18px;margin:5px}button{cursor:pointer}</style><h1>Guess 1\u2013100</h1><input id='n' type='number' min='1' max='100'><button onclick='guess()'>Guess</button><h2 id='m'>Good luck!</h2><script>let secret=Math.floor(Math.random()*100)+1;function guess(){let x=+n.value;m.textContent=x===secret?'\ud83c\udf89 You got it!':x<secret?'Too low!':'Too high!' }<\\/script>"
+    }
+  ]
+}
